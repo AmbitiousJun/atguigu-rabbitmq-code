@@ -34,7 +34,7 @@ public class Publisher {
         //    boolean exclusive,  是否排它（独占），即是否只能由一个消费者进行消费
         //    boolean autoDelete,  当最后一个消费者断开连接时，是否自动删除队列
         //    Map<String, Object> arguments) throws IOException; 高级参数
-        channel.queueDeclare(QUEUE_NAME, false, true, false, null);
+        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
         // 3 发送消息
         String msg = "hello world!";
         // void basicPublish(
