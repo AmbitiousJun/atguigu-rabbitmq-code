@@ -38,7 +38,7 @@ public class Consumer {
         //     String queue,  队列名称
         //     boolean autoAck,  是否自动发送应答
         //     DeliverCallback deliverCallback,  成功接收消息的回调
-        //     CancelCallback cancelCallback) throws IOException;  消息接收
+        //     CancelCallback cancelCallback) throws IOException;  消息接收失败的回调
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, cancelCallback);
     }
 }
