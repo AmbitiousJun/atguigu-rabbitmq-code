@@ -44,5 +44,6 @@ public class Publisher {
         //     byte[] body) throws IOException;  发送的消息体
         channel.basicPublish("", QUEUE_NAME, null, msg.getBytes());
         System.out.println("消息发送成功了");
+        conn.close();
     }
 }
