@@ -27,6 +27,7 @@ public class Task01 {
             while (scanner.hasNext()) {
                 String msg = scanner.next();
                 channel.basicPublish("", QUEUE_NAME, null, msg.getBytes(StandardCharsets.UTF_8));
+                System.out.println("消息发送成功: " + msg);
             }
         }
     }
